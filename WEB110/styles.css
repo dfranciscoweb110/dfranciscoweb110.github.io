@@ -16,4 +16,6 @@ p {
   color: black;
   font-size: 100%;
   text-align: left;
+  padding: 30px;
+  margin: 10px;
 }
