@@ -5,12 +5,10 @@ h1 {
   color: brown;
   font-family: britannic;
   font-size: 200%;
-  text-align: center;
+  text-align: left;
   border: 2px solid black;
   padding: 30px;
   margin: 10px;
-  float: left;
-  clear: both;
 }
 p {
   color: black;
