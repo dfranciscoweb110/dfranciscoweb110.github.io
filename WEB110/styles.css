@@ -2,18 +2,18 @@ body {
   background-color: linen;
 }
 h1 {
-  color: white;
+  color: brown;
   font-family: verdana;
   font-size: 200%;
   text-align: center;
-  border: 2px solid white;
+  border: 2px solid black;
   padding: 30px;
   margin: 10px;
   float: left;
   clear: both;
 }
 p {
-  color: red;
+  color: black;
   font-size: 100%;
   text-align: center;
   border: 2px solid white;
