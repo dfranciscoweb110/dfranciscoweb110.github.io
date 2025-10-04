@@ -9,9 +9,7 @@ h1 {
   margin: 10px;
 }
 p {
-  color: black;
-  font-size: 100%;
-  border: 2px solid black;
+  border: 1px solid black;
   padding: 30px;
   margin: 10px;
 }
