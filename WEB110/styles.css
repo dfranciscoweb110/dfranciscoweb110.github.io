@@ -1,5 +1,5 @@
 body {
-  background-color: powderblue;
+  background-color: linen;
 }
 h1 {
   color: white;
@@ -10,6 +10,7 @@ h1 {
   padding: 30px;
   margin: 10px;
   float: left;
+  clear: both;
 }
 p {
   color: red;
@@ -19,4 +20,5 @@ p {
   padding: 30px;
   margin: 10px;
   float: left;
+  clear: both;
 }
