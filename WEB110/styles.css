@@ -1,0 +1,16 @@
+body {
+  background-color: linen;
+}
+h1 {
+  color: brown;
+  font-family: britannic;
+  font-size: 200%;
+  text-align: left;
+  margin: 10px;
+}
+p {
+  display: inline-block;
+  border: 2px solid black;
+  padding: 10px;
+  margin: 10px;
+}
