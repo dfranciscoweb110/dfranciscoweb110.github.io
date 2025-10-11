@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="styles.css">
-    <meta charset="UTF-8">
-  <title>Assignment 12</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript and Canvas Example</title>
 </head>
-  <body>
-  <h1>JavaScript</h1>
+<body>
+  <h1 id="myHeading"></h1>
+  <p id="dateTime"></p>
+  <canvas id="nameCanvas" width="400" height="100" style="border:1px solid black;"></canvas>
+  <canvas id="shapesCanvas" width="400" height="200" style="border:1px solid black;"></canvas>
+
+  <script>
+    document.getElementById("myHeading").textContent = "Dyan S. Francisco";
+    const currentDate = new Date();
+    document.getElementById("dateTime").textContent = "Current Date and Time: " + currentDate;
+
+    const nameCanvas = document.getElementById("nameCanvas");
+    const nameCtx = nameCanvas.getContext("2d");
+    nameCtx.font = "30px Arial";
+    nameCtx.fillStyle = "blue";
+    nameCtx.fillText("Dyan S. Francisco", 50, 60);
+
+    const shapesCanvas = document.getElementById("shapesCanvas");
+    const shapesCtx = shapesCanvas.getContext("2d");
+    shapesCtx.beginPath();
+    shapesCtx.moveTo(20, 20);
+    shapesCtx.lineTo(200, 20);
+    shapesCtx.strokeStyle = "red";
+    shapesCtx.lineWidth = 3;
+    shapesCtx.stroke();
+
+    shapesCtx.beginPath();
+    shapesCtx.arc(100, 100, 40, 0, 2 * Math.PI);
+    shapesCtx.strokeStyle = "green";
+    shapesCtx.lineWidth = 3;
+    shapesCtx.stroke();
+
+    shapesCtx.beginPath();
+    shapesCtx.rect(250, 50, 80, 80);
+    shapesCtx.strokeStyle = "blue";
+    shapesCtx.lineWidth = 3;
+    shapesCtx.stroke();
+  </script>
+
+  <h2>JavaScript</h2>
 <p>
 While completing the JavaScript and HTML5 tutorials from Mozilla, W3Schools, and other sources, I learned how JavaScript can dynamically interact with HTML elements to make web pages more interactive and responsive. By following the CodeMaven “Hello World” example, I practiced using the p tag with JavaScript to display a personalized message like “Hello [my name]!” and also learned how to use the Date() function to show the current date and time dynamically. Additionally, experimenting with the HTML5 canvas helped me understand how JavaScript can be used to draw shapes, text, and graphics directly on a web page. These activities deepened my understanding of how JavaScript connects logic, structure, and visual design, and I can apply these skills in future web development projects to create more engaging and user-friendly websites or interactive interfaces.
 </p>
-  </body>
+</body>
+</html>
