@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SQL Activity</title>
 </head>
 <body>
-
-    <!-- Top-level heading -->
     <h1>SQL Statements Activity</h1>
-
-    <!-- Paragraph and list for SELECT statements -->
     <p>The following are single-table <code>SELECT</code> statements used in this activity:</p>
     <ul>
         <li><code>SELECT * FROM CUSTOMERS;</code></li>
@@ -19,13 +16,11 @@
         <li><code>SELECT City FROM CUSTOMERS ORDER BY City;</code></li>
     </ul>
 
-    <!-- Paragraph and list for INSERT, UPDATE, DELETE statements -->
     <p>The following are the <code>INSERT</code>, <code>UPDATE</code>, and <code>DELETE</code> statements used in this activity:</p>
     <ul>
         <li><code>INSERT INTO CUSTOMERS (CustomerName, City, Country) VALUES ('John Doe', 'New York', 'USA');</code></li>
         <li><code>UPDATE CUSTOMERS SET City = 'Los Angeles' WHERE CustomerName = 'John Doe';</code></li>
         <li><code>DELETE FROM CUSTOMERS WHERE CustomerName = 'John Doe';</code></li>
     </ul>
-
 </body>
 </html>
