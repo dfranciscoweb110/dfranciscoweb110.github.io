@@ -8,24 +8,45 @@
 </head>
 <body>
     <h1>SQL Statements Activity</h1>
-
+    
 <p>The following are single-table SELECT statements used in this activity:</p>
 <ul>
-    <li>SELECT * FROM CUSTOMERS;</li>
-    <li>SELECT CustomerName, City FROM CUSTOMERS;</li>
-    <li>SELECT CustomerID, Country FROM CUSTOMERS WHERE Country = 'USA';</li>
-    <li>SELECT City FROM CUSTOMERS ORDER BY City;</li>
+    <li>SELECT * FROM Customers;</li>
+    <li>SELECT CustomerID, CustomerName FROM Customers;</li>
+    <li>SELECT CustomerName, Address, City, PostalCode FROM Customers WHERE Country = 'UK';</li>
+    <li>SELECT ContactName, CustomerName FROM Customers ORDER BY ContactName;</li>
+    <li>SELECT COUNT(*) AS TotalCustomers FROM Customers;</li>
+    <li>SELECT Country, COUNT(*) AS NumberOfCustomers FROM Customers GROUP BY Country;</li>
+    <li>SELECT Country, COUNT(*) AS NumberOfCustomers FROM Customers GROUP BY Country ORDER BY NumberOfCustomers DESC, Country ASC;</li>
+    <li>SELECT Country, COUNT(*) AS NumberOfCustomers FROM Customers GROUP BY Country HAVING COUNT(*) > 10 ORDER BY NumberOfCustomers DESC, Country ASC;</li>
+</ul>
+
+<p>The following are multiple-table SELECT statements used in this activity:</p>
+<ul>
+    <li>SELECT Customers.CustomerName, Orders.OrderID, Orders.OrderDate FROM Customers INNER JOIN Orders ON Customers.CustomerID = Orders.CustomerID;</li>
+    <li>SELECT Customers.CustomerName, Orders.OrderID AS OrderNumber, Orders.OrderDate FROM Customers INNER JOIN Orders ON Customers.CustomerID = Orders.CustomerID;</li>
+    <li>SELECT Customers.CustomerName, Orders.OrderID AS OrderNumber, Orders.OrderDate FROM Customers INNER JOIN Orders ON Customers.CustomerID = Orders.CustomerID ORDER BY Customers.CustomerName, Orders.OrderID;</li>
+    <li>SELECT Orders.OrderID AS OrderNumber, Orders.OrderDate, Products.ProductName, [Order Details].Quantity FROM ((Orders INNER JOIN [Order Details] ON Orders.OrderID = [Order Details].OrderID) INNER JOIN Products ON [Order Details].ProductID = Products.ProductID);</li>
+    <li>SELECT Orders.OrderID AS OrderNumber, Orders.OrderDate, Products.ProductName, [Order Details].Quantity, [Order Details].Quantity * Products.Price AS ExtendedPrice FROM ((Orders INNER JOIN [Order Details] ON Orders.OrderID = [Order Details].OrderID) INNER JOIN Products ON [Order Details].ProductID = Products.ProductID);</li>
+    <li>SELECT Orders.OrderID AS OrderNumber, Orders.OrderDate, Products.ProductName, [Order Details].Quantity, [Order Details].Quantity * Products.Price AS ExtendedPrice FROM ((Orders INNER JOIN [Order Details] ON Orders.OrderID = [Order Details].OrderID) INNER JOIN Products ON [Order Details].ProductID = Products.ProductID) WHERE Orders.CustomerID = 2;</li>
+    <li>SELECT Orders.OrderID AS OrderNumber, Orders.OrderDate, Products.ProductName, [Order Details].Quantity, [Order Details].Quantity * Products.Price AS ExtendedPrice FROM ((Orders INNER JOIN [Order Details] ON Orders.OrderID = [Order Details].OrderID) INNER JOIN Products ON [Order Details].ProductID = Products.ProductID) WHERE Customers.CustomerName = 'Around the Horn';</li>
 </ul>
 
 <p>The following are the INSERT, UPDATE, and DELETE statements used in this activity:</p>
 <ul>
-    <li>INSERT INTO CUSTOMERS (CustomerName, City, Country) VALUES ('John Doe', 'New York', 'USA');</li>
-    <li>UPDATE CUSTOMERS SET City = 'Los Angeles' WHERE CustomerName = 'John Doe';</li>
-    <li>DELETE FROM CUSTOMERS WHERE CustomerName = 'John Doe';</li>
+    <li>INSERT INTO Shippers (ShipperID, ShipperName, Phone) VALUES (4, 'On Time Delivery', '(503) 555-0123');</li>
+    <li>UPDATE Products SET Price = Price + 1;</li>
+    <li>UPDATE Products SET Price = Price - 1;</li>
+    <li>UPDATE Shippers SET ShipperName = 'On-Time Delivery' WHERE ShipperID = 4;</li>
+    <li>DELETE FROM Shippers WHERE ShipperID = 4;</li>
 </ul>
 
 <h2>Databases</h2>
-<p>While completing these activities, I learned how to write and use SQL statements to manage and manipulate data within a database. I now understand how to retrieve specific information using SELECT statements and how to modify data with INSERT, UPDATE, and DELETE commands. This knowledge will help me in future work or projects by allowing me to organize, maintain, and analyze data effectively in any environment that relies on databases.</p>
+<p>
+    While working on these activities, I learned how to use SQL to get, add, change, and remove data in a database. 
+    I now understand how SELECT, INSERT, UPDATE, and DELETE statements work and when to use them. 
+    This will help me in the future when I need to organize or manage data for school, work, or other projects.
+</p>
 
 </body>
 </html>
