@@ -36,7 +36,8 @@ main {
   background: white;
   border: 3px solid #65b791;
 }
-
+h2 > img {
+  width:40%
 footer {
   background: #65b791;
   color: white;
