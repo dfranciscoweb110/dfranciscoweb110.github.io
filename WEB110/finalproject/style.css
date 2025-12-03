@@ -35,14 +35,14 @@ main {
   max-width: 900px;
   margin: auto;
   background: white;
-  border: 1px solid black;
+  border: 1px solid #65b791;
 }
 img {
   width:100%
 }
 footer {
   background: #65b791;
-  color: black;
+  color: white;
   text-align: center;
   padding: 5px;
   margin-top: 20px;
