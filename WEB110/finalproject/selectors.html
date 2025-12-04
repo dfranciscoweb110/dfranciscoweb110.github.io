@@ -19,12 +19,28 @@
 <h2>Understanding Selectors</h2>
 <p>Selectors target the HTML elements you want to style.</p>
 <h3>Common Selectors</h3>
-<ul>
+<ol>
 <li><strong>Element selector</strong> – targets tags like <code>p</code> or <code>h1</code></li>
+    <ul>
+      <li><b>Description:</b> Targets all HTML elements of a specific type. Useful for applying styles to every instance of an element.</li>
+      <li><b>Example:</b> <code> p { color: blue; } → </code> All paragraphs will have blue text.</li>
+    </ul>
 <li><strong>Class selector</strong> – targets elements with a class: <code>.classname</code></li>
+      <ul>
+        <li><b>Description:</b>Targets elements that have a specific class attribute. Allows styling multiple elements that share the same class.</li>
+        <li><b>Example:</b> <code> .highlight { background-color: yellow; } → </code> All elements with class="highlight" will have a yellow background.</li>
+      </ul>
 <li><strong>ID selector</strong> – targets one unique element: <code>#idname</code></li>
+      <ul>
+        <li><b>Description:</b> Targets a single element with a unique ID. IDs should only appear once per page.</li>
+        <li><b>Example:</b> <code> #header { font-size: 24px; } → </code>The element with id="header" will have larger text.</li>
+      </ul>
 <li><strong>Attribute selector</strong> – targets elements by attributes</li>
-</ul>
+        <ul>
+          <li><b>Description:</b> Targets elements based on the presence or value of an attribute. Very useful for form inputs or custom attributes.</li>
+          <li><b>Example:</b> <code>[type="text"] { border: 1px solid gray; } → </code> All <input> elements with type="text"  will get a gray border.</li>
+        </ul>
+</ol>
 
 <h3>W3Schools Examples</h3>
 <ul>
@@ -34,9 +50,11 @@
   <li><a href="https://www.w3schools.com/css/css_selectors.asp#id" target="_blank">ID Selector</a></li>
   <li><a href="https://www.w3schools.com/css/css_attribute_selectors.asp" target="_blank">Attribute Selectors</a></li>
 </ul>
+
 </main>
 <footer>
 <p>&copy; 2025 CSS Learning Hub</p>
 </footer>
 </body>
 </html>
+
